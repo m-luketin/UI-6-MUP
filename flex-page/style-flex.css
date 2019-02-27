@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans';
+    background-color: lightgray;
 }
 
 h3 {
@@ -12,6 +13,7 @@ h3 {
 main {
     margin-left: 100px;
     display: flex;
+    background-color: transparent;
 }
 
 .news {
@@ -19,7 +21,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     height: 450px;
-    width: 800px;
+    width: 825px;
 }
 
 .news--article__large {
@@ -93,7 +95,51 @@ main {
     height: 100%;
 }
 
-.news--date,.scrollable--date {
+.news--date, .scrollable--date {
     font-style: italic;
 }
 
+.notifications {
+    width: 365px;
+    height: 390px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #414142;
+    background-color: white;
+}
+
+.notifications--title {
+    width:65%;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.notifications--scrollable {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;    
+    overflow-y: scroll;
+}
+
+.scrollable--notification {
+    border-bottom: 1px solid #F2F2F2;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
+.scrollable--date {
+    font-size: 12px;
+}
+
+.notifications--button {
+    width: 100%;
+    padding: 13px 0px 18px 0px;
+    background-color: #F2F2F2;
+    border: 0px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 15px;
+    color: #414142;
+}
