@@ -1,6 +1,7 @@
 body {
-    margin: auto;
-    width: 1310px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Open Sans';
     background-color: lightgray;
 }
@@ -11,19 +12,22 @@ h3 {
 
 main {
     background-color: transparent;
-    position:  absolute;
-    width: 1340px;
-    margin-left: -60px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .news {
-    display: table-row;
+    height: 450px;
+    width: 70%;
+    float:left;
+
 }
 
 .news--article__large {
     position: relative;
-    width: 620px;
-    padding-bottom: 466px; 
+    float: left;
+    width: 75%;
+    height: 99.99%;
 }
 
 .news--article__large h2, p, span {
@@ -34,17 +38,12 @@ main {
     font-size: 14px;
 }
 
-.news--articles {
-    display: table-cell;
-}
-
 .news--article__small {
-    font-size: 12px;
-    width: 210px;
-    padding-bottom: 60px;
     position: relative;
-    bottom: 450px;
-    margin-top: -22.5px;
+    float: left;
+    width: 25%;
+    height: 33.33%;
+    font-size: 12px;
 }
 
 .article--category {
@@ -64,6 +63,7 @@ main {
 
 .news--article__small .article--category {
     margin-left: 10px;
+    top: 10px;
 }
 
 .article--content {
@@ -71,15 +71,11 @@ main {
 }
 
 .news--article__large .article--content{
-    position: absolute;
-    margin-left: 20px;
-    top: 300px;
+    margin: 30px;
 }
 
 .news--article__small .article--content {
-    position: relative;
     margin: 20px 9px;
-    top: 70px;
 }
 
 .new--aspect_ratio_box {
@@ -90,7 +86,7 @@ main {
 .news--image {
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: 100%;    
     height: 100%;
 }
 
@@ -99,24 +95,25 @@ main {
 }
 
 .notifications {
-    width: 450px;
-    padding: 60px 30px;
+    width: 30%;
+    height: 390px;
+    padding: 30px;
+    float: right;
+    position: relative;
     color: #414142;
     background-color: white;
-    position: relative;
-    margin-left: 832px;
-    margin-top: -950px;
+    margin-right: -60px;
 }
 
 .notifications--title {
-    width: 55%;
+    width: 70%;
     font-family: 'Open Sans';
     font-size: 18px;
-    margin: 0 22.5% 30px 22.5%;;
 }
 
 .notifications--scrollable {
-    height: 250px;  
+    margin: 20px;
+    height: 270px;    
     overflow-y: scroll;
 }
 
@@ -138,18 +135,14 @@ main {
     font-family: 'Open Sans';
     font-weight: 600;
     font-size: 15px;
-    color: #414142;
-    margin-top: 30px;
+    color: #414142; 
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1200px){
     
-    body {
-        max-width: 825px;
-    }
-
     main {
-        width: 830px;
+        max-width: 825px;
+        grid-template-rows: auto auto;
     }
 
     .news {
@@ -157,23 +150,16 @@ main {
     }
 
     .notifications {
-        display: table;
-        position: relative;
-        width: 770px;
-        top: -450px;
-        left: 0px;
-        margin-right: 0px;
-        margin-top: -465px;
+        width: 92.8%;
+        float: left;
     }
 
     .notifications--title {
-        width: 30%;
-        margin-left: 40px;
+        width: 90%;
     }
 
     .notifications--scrollable {
-        width: 100%;
-        margin-left: 5%;
+        width: 75%;
     }
 
     .notifications--scrollable {
@@ -181,21 +167,19 @@ main {
     }
 
     .notifications--button {
-        margin: 0 40%;
         width: 25%;
         font-size: 14px;
         padding: 10px 15px 15px 15px;
     }
 }
 
-@media screen and (max-width: 900px){
-    body {
-        max-width: 650px;
+@media screen and (max-width: 1000px){
+    main {
+        max-width: 825px;
     }
 
     .news {
         margin-bottom: 150px;
-        display: table-cell;
     }
 
     .news--article__large {
@@ -204,49 +188,29 @@ main {
 
     .news--article__small {
         width: 33.33%;
-        display: table-cell;
-        top: 0px;
-    }
-
-    .notifications {
-        top: 0px;
-        left: 0px;
-        margin: 0px;
     }
 }
 
 @media screen and (max-width: 768px){
-    body {
-        width: 100%;
-        margin: auto;
-    }
 
     main {
-        margin: auto;
-        display: block;
+        width: 80%;
     }
 
     .news{
         margin-bottom: 450px;
-        width: 150%;
     }
 
     .news--article__small {
         width: 100%;
-        height: 150px;
         background-color: white;
-        display: table-row;
-    }
-
-    .news--article__small h3 {
-        width: 75%;
     }
 
     .news--article__small .article--content {
         color: black;
         width: 100%;
         margin-left: 150px;
-        top: 50px;
+        margin-top: 50px
     }
 
     .news--article__small .article--category {
@@ -263,19 +227,16 @@ main {
     }
 
     .notifications {
-        width: 583.5px;
-    }
-
-    .notifications--title {
-        width: 50%;
+        width: 90.1%;
     }
 
     .notifications--button {
         width: 50%;
-        margin: 5% 20%;
     }
 }
 
 @media screen and (max-width: 545px){
- 
+    main {
+        width: 100%;
+    }
 }
